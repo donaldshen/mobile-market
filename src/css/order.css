@@ -1,0 +1,334 @@
+@import "common.css";
+
+:root {
+  --topBarHeight: 3.1rem;
+  --btnGroupHeight: 3.7rem;
+  --arrowWidth: 3.5rem;
+}
+
+.topBar {
+  width: 100%;
+  height: var(--topBarHeight);
+  display: grid;
+  grid-template-columns: 3.5rem 2.8rem 1fr 2.8rem var(--arrowWidth);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+  "home . logo search cart";
+  justify-items: center;
+  align-items: center;
+  background: #fafafa;
+  position: fixed;
+  z-index: 10;
+  border-bottom: 1px solid var(--dividerColor);
+
+  & a {
+    position: relative;
+
+    & .icon {
+      background: url(/assets/img/sprites/topBar.png);
+      background-size: 6rem 13.9rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    & .badge {
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      top: 0.1rem;
+      right: -0.1rem;
+      background: var(--darkRed);
+      border-radius: 50%;
+      color: white;
+      font-size: 0.8rem;
+      line-height: 1rem;
+      text-align: center;
+    }
+  }
+
+  & a.home {
+    width: 1.7rem;
+    height: 1.6rem;
+    grid-area: home;
+
+    & .icon {
+      background-position-y: -2.6rem;
+    }
+  }
+
+  & a.logo {
+    grid-area: logo;
+    width: 6.1rem;
+    height: 1.9rem;
+
+    & .icon {
+      background-position-y: -4.5rem;
+    }
+  }
+
+  & a.search {
+    grid-area: search;
+    width: 2.3rem;
+    height: 2.3rem;
+
+    & .icon {
+      background-position-y: 2.3rem;
+    }
+  }
+
+  & a.cart {
+    grid-area: cart;
+    width: 2.3rem;
+    height: 2.3rem;
+
+    & .icon {
+      background-position-y: 0;
+    }
+  }
+}
+
+main {
+  padding-top: var(--topBarHeight);
+  padding-bottom: var(--btnGroupHeight);
+
+  & .arrowRight::after {
+    grid-area: arrow;
+    content: "";
+    width: 0.6rem;
+    height: 0.6rem;
+    border-top: 1px solid #666;
+    border-right: 1px solid #666;
+    transform: rotate(45deg);
+    justify-self: center;
+    align-self: center;
+  }
+
+  & > * {
+    padding-left: 1.21rem;
+
+    &.list > * {
+      display: grid;
+      grid-template-rows: 3.7rem;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid var(--dividerColor);
+      }
+    }
+  }
+
+  & .info {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 4rem 1fr var(--arrowWidth);
+    grid-template-areas:
+    "name phone arrow"
+    "default address arrow";
+    grid-gap: 0.1rem 0;
+    justify-items: start;
+    background-color: white;
+    background-image: url(/assets/img/address-bg.png);
+    background-repeat: repeat-x;
+    background-size: 2rem auto;
+
+    & .name {
+      grid-area: name;
+    }
+
+    & .phone {
+      grid-area: phone;
+    }
+
+    & .default {
+      grid-area: default;
+      font-size: 0.75rem;
+      color: var(--darkRed);
+      border: 2px solid var(--darkRed);
+      border-radius: 4px;
+      padding: 0 0.2rem;
+    }
+
+    & .address {
+      grid-area: address;
+      font-size: 0.85rem;
+      color: #666;
+    }
+  }
+
+  & .discount {
+    & .coupon {
+      grid-template-columns: 1fr 2rem var(--arrowWidth);
+      grid-template-areas:
+      "text1 text2 arrow";
+
+      & .text1 {
+        grid-area: text1;
+      }
+
+      & .text2 {
+        grid-area: text2;
+      }
+    }
+
+    & .giftCard {
+      grid-template-columns: 2rem 1fr var(--arrowWidth);
+      grid-template-areas:
+      "checkbox text arrow";
+
+      & .checkbox {
+        width: 1.3rem;
+        height: 1.3rem;
+        background: url(/assets/img/sprites/checkbox.png);
+        background-size: cover;
+        background-position: 0 -1.7rem;
+        grid-area: checkbox;
+      }
+
+      & .text {
+        color: #ccc;
+        grid-area: text;
+      }
+    }
+  }
+
+  & .summary {
+    & .item {
+      grid-template-columns: 1fr 2fr;
+
+      & .price {
+        justify-self: right;
+        margin-right: 1rem;
+
+        & .tag {
+          margin-right: 2rem;
+          color: var(--orange);
+          border: 1px solid var(--orange);
+          border-radius: 4px;
+          font-size: 0.8rem;
+          padding: 0 0.2rem;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            right: 0;
+            width: 0.35rem;
+            height: 0.35rem;
+            border-top: 1px solid var(--orange);
+            border-right: 1px solid var(--orange);
+            transform: translate(60%, -50%) rotate(45deg);
+            background: white;
+          }
+        }
+      }
+    }
+
+    & .invoice {
+      grid-template-columns: 2rem 1fr var(--arrowWidth);
+      grid-template-areas:
+      "checkbox text arrow";
+
+      & .checkbox {
+        width: 1.3rem;
+        height: 1.3rem;
+        background: url(/assets/img/sprites/checkbox.png);
+        background-size: cover;
+        background-position: 0 -3.3rem;
+        grid-area: checkbox;
+      }
+
+      & .text {
+        grid-area: text;
+      }
+    }
+  }
+
+  & .items {
+    & .item {
+      padding: 0.8rem 0;
+      grid-template-columns: 5rem 1fr 2.1rem;
+      grid-template-rows: auto auto 2rem;
+      grid-gap: 0 0.5rem;
+      grid-template-areas:
+      "img name num"
+      "img detail detail"
+      "img price price";
+
+      & img {
+        grid-area: img;
+        width: 100%;
+        background: var(--backgroundColor);
+      }
+
+      & .name {
+        grid-area: name;
+      }
+
+      & .num {
+        grid-area: num;
+      }
+
+      & .detail {
+        grid-area: detail;
+        font-size: 0.8rem;
+        color: #999;
+      }
+
+      & .price {
+        grid-area: price;
+      }
+    }
+  }
+
+  & .agreement {
+    color: #999;
+    background: var(--backgroundColor);
+    display: flex;
+    align-items: center;
+    height: 2rem;
+
+    & .checkbox {
+      width: 1.3rem;
+      height: 1.3rem;
+      background: url(/assets/img/sprites/checkbox.png);
+      background-size: cover;
+      grid-area: checkbox;
+    }
+
+    & span {
+      margin: 0 0.1rem 0 0.5rem;
+    }
+  }
+}
+
+footer.pay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  display: flex;
+  align-items: stretch;
+  z-index: 10;
+
+  & .price {
+    padding-left: 1.21rem;
+    color: var(--darkRed);
+    background: white;
+    flex: 1 0;
+    line-height: 3.5rem;
+    border-top: 1px solid var(--dividerColor);
+    font-size: 1.1rem;
+  }
+
+  & a {
+    color: white;
+    background: var(--darkRed);
+    flex: 0 0 8rem;
+    line-height: 3.5rem;
+    text-align: center;
+  }
+}

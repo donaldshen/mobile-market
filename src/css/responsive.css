@@ -1,0 +1,18 @@
+:root {
+    --iPhone5: 320px;
+    --iPhone6: 375px;
+    --iPhone6plus: 414px;
+}
+/*media不能用依赖于dom的var*/
+@custom-media --iPhone5-screen screen and (min-width: 320px) and (max-width: 374px);
+@custom-media --iPhone6-screen screen and (min-width:375px) and (max-width:413px);
+@custom-media --iPhone6plus-screen screen and (min-width:414px) and (max-width:639px);
+
+html{font-size:10px}
+@media (--iPhone5-screen){html{font-size:12px}}
+@media (--iPhone6-screen){html{font-size:14px}}
+@media (--iPhone6plus-screen){html{font-size:15.5px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}

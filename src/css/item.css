@@ -1,0 +1,260 @@
+@import "common.css";
+
+:root {
+  --topBarHeight: 3.1rem;
+  --btnGroupHeight: 3.7rem;
+}
+
+.topBar {
+  width: 100%;
+  height: var(--topBarHeight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.9rem;
+  background: #fafafa;
+  position: fixed;
+  z-index: 10;
+  border-bottom: 1px solid var(--dividerColor);
+
+  & .icon {
+    background: url(/assets/img/sprites/topBar.png);
+    background-size: 6rem 13.9rem;
+  }
+
+  & a.home {
+    width: 1.7rem;
+    height: 1.6rem;
+
+    & .icon {
+      width: 100%;
+      height: 100%;
+      background-position-y: -2.6rem;
+    }
+  }
+
+  & a.logo .icon {
+    width: 6.1rem;
+    height: 1.9rem;
+    background-position-y: -4.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  & .right a {
+    display: inline-block;
+    height: 100%;
+
+    & .icon {
+      vertical-align: middle;
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+
+    &.search .icon {
+      background-position-y: 2.3rem;
+      margin-right: 0.6rem;
+    }
+
+    &.cart .icon {
+      background-position-y: 0;
+    }
+  }
+}
+
+main {
+  padding-top: var(--topBarHeight);
+  padding-bottom: var(--btnGroupHeight);
+
+  & .swiper-container {
+    & .swiper-slide {
+      display: flex;
+      overflow: hidden;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    & .swiper-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1.7rem;
+      right: 1.15rem;
+      bottom: 1.15rem;
+      left: auto;
+      font-size: 0.7rem;
+      background: white;
+      border-radius: 4px;
+    }
+  }
+
+  & .characteristics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.7rem 0;
+    background: #f9f9f9;
+
+    & .item {
+      display: grid;
+      grid-template-columns: 2.56rem auto;
+      grid-gap: 0.3rem;
+      grid-template-areas:
+      "img text1"
+      "img text2";
+      align-items: center;
+
+      & img {
+        grid-area: img;
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      & .text1 {
+        grid-area: text1;
+      }
+
+      & .text2 {
+        grid-area: text2;
+      }
+    }
+  }
+
+  & .baseInfo {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.4rem 0;
+
+    & .info {
+      padding: 0 1.4rem;
+
+      & .name {
+        font-size: 1.3rem;
+      }
+
+      & .desc {
+        color: var(--secondaryColor);
+      }
+
+      & .price {
+        font-size: 1.8rem;
+        color: var(--darkRed);
+        font-weight: bold;
+      }
+
+      & .tags {
+        display: flex;
+        flex-wrap: wrap;
+
+        & li {
+          border: 1px solid var(--orange);
+          border-radius: 4px;
+          margin: 0.4rem 0.4rem 0 0;
+          padding: 0 0.1rem;
+
+          & a {
+            font-size: 0.8rem;
+            color: var(--orange);
+            padding: 0 0.2rem;
+
+            &::after {
+              content: "";
+              display: inline-block;
+              width: 0.4rem;
+              height: 0.4rem;
+              border: 1px solid var(--orange);
+              border-bottom: none;
+              border-left: none;
+              vertical-align: middle;
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+
+    & .comment {
+      border-left: 1px dashed var(--dividerColor);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 5.7rem;
+      flex-shrink: 0;
+
+      & .num {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--darkRed);
+      }
+
+      & .com {
+        color: var(--darkRed);
+        font-size: 0.8rem;
+      }
+
+      & .more {
+        font-size: 0.8rem;
+        border: 1px solid var(--secondaryColor);
+        width: 2.8rem;
+        margin-top: 0.7rem;
+        text-align: center;
+      }
+    }
+  }
+
+  & .moreComments,
+  & .itemDetail {
+    height: 10rem;
+  }
+}
+
+.btnGroup {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  & button {
+    background: white;
+    height: var(--btnGroupHeight);
+    padding: 0;
+    margin: 0;
+    border: 1px solid #c7c7c7;
+    font-size: 1rem;
+  }
+
+  & .customerService {
+    width: 5.6rem;
+    flex-grow: 0;
+
+    & .icon {
+      background: url(/assets/img/customerService.png);
+      background-size: cover;
+      width: 2.15rem;
+      height: 2.15rem;
+    }
+  }
+
+  & .buyNow {
+    border-left: 0;
+    border-right: 0;
+    flex: 1 0 0;
+  }
+
+  & .addToCart {
+    flex: 1 0 0;
+    background: var(--darkRed);
+    color: white;
+    border-color: var(--darkRed);
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <!-- 如果把一个web app添加到了主屏幕中，那么从主屏幕中打开这个web app则全屏显示 -->
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <title>订单页</title>
+  <link rel="stylesheet" href="./css/order.css">
+</head>
+<body>
+  <header class="topBar">
+    <a class="home" href="./main.html"><i class="icon"></i></a>
+    <a class="logo" href="./main.html"><i class="icon"></i></a>
+    <a class="search" href="#"><i class="icon"></i></a>
+    <a class="cart" href="./cart.html"><i class="icon"></i><span class="badge">1</span></a>
+  </header>
+  <main>
+    <section class="info arrowRight">
+      <span class="name">张小明</span>
+      <span class="phone">233****3333</span>
+      <span class="default">默认</span>
+      <span class="address">广东省广州市天河区科韵路14号</span>
+    </section>
+    <section class="discount list">
+      <div class="coupon arrowRight">
+        <span class="text1">请选择优惠券</span>
+        <span class="text2">0张</span>
+      </div>
+      <div class="giftCard arrowRight">
+        <i class="icon checkbox"></i>
+        <span class="text">礼品卡：¥0.00</span>
+      </div>
+    </section>
+    <section class="summary list">
+      <section class="item">
+        <span class="name">商品合计</span>
+        <span class="price">¥299.00</span>
+      </section>
+      <section class="item">
+        <span class="name">优惠券</span>
+        <span class="price">-¥0.00</span>
+      </section>
+      <section class="item">
+        <span class="name">运费</span>
+        <span class="price"><span class="tag">满88元免邮</span>¥0.00</span>
+      </section>
+      <section class="invoice arrowRight">
+        <i class="icon checkbox"></i>
+        <span class="text">我要开发票</span>
+      </section>
+    </section>
+    <section class="items list">
+      <section class="item">
+        <img src="assets/img/item/jeanInCart.png" alt="jean">
+        <span class="name">男式天丝棉弹直筒牛仔裤</span>
+        <span class="num">x1</span>
+        <span class="detail">深蓝色; 29（170/78A）</span>
+        <span class="price">¥229.00</span>
+      </section>
+    </section>
+    <section class="agreement">
+      <i class="icon checkbox"></i>
+      <span>我同意</span>
+      <a href="#">《网易严选服务协议》</a>
+    </section>
+  </main>
+  <footer class="pay">
+    <span class="price">应付：¥229.00</span>
+    <a href="#">去付款</a>
+  </footer>
+</body>
+</html>

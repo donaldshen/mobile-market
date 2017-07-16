@@ -1,0 +1,48 @@
+@import "responsive.css";
+
+:root {
+  --backgroundColor: #f4f4f4;
+  --dividerColor: #d9d9d9;
+  --secondaryColor: #7f7f7f;
+  --mainColor: #333;
+  --darkRed: #b4282d;
+  --orange: #f48f18;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background-color: var(--backgroundColor);
+  font-family: PingFangSC-Light,helvetica,'Heiti SC';
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--mainColor);
+  text-decoration: none;
+}
+
+i.icon {
+  display: inline-block;
+}
+
+main > * {
+  background-color: white;
+
+  &:not(:last-of-type) {
+    margin-bottom: 0.65rem;
+  }
+}

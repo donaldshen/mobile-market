@@ -1,0 +1,398 @@
+@import "common.css";
+
+:root {
+  --searchbarHeight: 3.1rem;
+  --navbarHeight: 2.3rem;
+  --headerHeight: calc(var(--searchbarHeight) + var(--navbarHeight));
+  --footerHeight: 3.55rem;
+}
+
+.headNavbar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--dividerColor);
+
+  & .search {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    height: var(--searchbarHeight);
+
+    & .logo img {
+      /*height按比例缩放*/
+      width: 5rem;
+      display: block;
+    }
+
+    & .input {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ededed;
+      border-radius: 0.3rem;
+      margin-left: 0.8rem;
+      height: 100%;
+
+      & .icon {
+        width: 1rem;
+        height: 1rem;
+        background-image: url(../assets/img/search.png);
+        background-size: contain;
+        margin-right: 0.3rem;
+      }
+
+      & .placeholder {
+        color: #666;
+      }
+    }
+  }
+
+  & nav {
+    height: var(--navbarHeight);
+    display: flex;
+
+    & ul {
+      display: flex;
+      /*关键一步：确保ul的width正常*/
+      flex-shrink: 0;
+
+      & .tab {
+        margin-left: 1.5rem;
+
+        & a {
+          display: block;
+          line-height: var(--navbarHeight);
+          padding: 0 0.6rem;
+          position: relative;
+        }
+
+        &.selected a {
+          color: var(--darkRed);
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0.12rem;
+            background-color: var(--darkRed);
+          }
+        }
+
+        &:last-of-type {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+main {
+  padding-top: var(--headerHeight);
+  padding-bottom: var(--footerHeight);
+
+  & .swiper-container .swiper-slide {
+    display: flex;
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      background: #f9f9f9;
+    }
+  }
+
+  & .servicePolicy ul {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & li {
+      display: flex;
+      align-items: center;
+      height: 2.5rem;
+
+      & .icon {
+        width: 1rem;
+        height: 1rem;
+        background-image: url(../assets/img/success.png);
+        background-size: cover;
+      }
+
+      & .text {
+        margin-left: 0.3rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  & .manufacturersSupplying {
+    background-color: white;
+
+    & header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3.7rem;
+
+      & a {
+        display: flex;
+        align-items: center;
+        font-size: 1.2rem;
+
+        & .icon {
+          background-image: url(../assets/img/go2.png);
+          background-size: cover;
+          width: 1.2rem;
+          height: 1.2rem;
+          margin-left: 0.4rem;
+        }
+      }
+    }
+
+    & ul {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0.4rem;
+
+      & li {
+        position: relative;
+        width: 50%;
+        padding: 0 0.2rem 0.4rem;
+
+        & .description {
+          position: absolute;
+          top: 0.8rem;
+          left: 0.8rem;
+
+          & .name {
+            margin: 0;
+            font-weight: normal;
+          }
+
+          & .price {
+            margin: 0.5rem 0;
+
+            & .price2 {
+              font-size: 0.8rem;
+            }
+          }
+
+          & .icon {
+            background-image: url(../assets/img/new.png);
+            background-size: cover;
+            width: 2rem;
+            height: 1rem;
+          }
+        }
+
+        & img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  & .newItems {
+    & header {
+      height: 10rem;
+      background: url(../assets/img/newBackground.png);
+      background-size: cover;
+      background-position: center bottom;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      & .slogan {
+        color: #8BA0B6;
+        font-size: 1.4rem;
+      }
+
+      & .all {
+        margin-top: 1rem;
+        width: 9rem;
+        height: 2.5rem;
+        background: #D8E5F1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #8BA0B6;
+
+        & .icon {
+          background: url(../assets/img/silverArrow.png);
+          background-size: 100% 100%;
+          width: 0.45rem;
+          height: 1rem;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+
+    & ul {
+      display: flex;
+      padding: 1rem;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      & li {
+        width: 10rem;
+        padding: 0 0.5rem;
+        margin-right: 1rem;
+        position: relative;
+
+        & a > * {
+          margin-bottom: 0.4rem;
+        }
+
+        & img {
+          width: calc(100% + 1rem);
+          transform: translateX(-0.5rem);
+          background: var(--backgroundColor);
+        }
+
+        & .tagWraper div {
+          display: inline-block;
+          margin-right: 0.5rem;
+          padding: 0.1rem 0.5rem;
+          color: white;
+          font-size: 0.8rem;
+          border-radius: 1px;
+
+          &.aniversary {
+            background: #e5686d;
+          }
+
+          &.gradientPrice {
+            background: #f48f18;
+          }
+        }
+
+        & .name,
+        & .description {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        & .name {
+          margin-top: 0.9rem;
+        }
+
+        & .description {
+          font-size: 0.85rem;
+          color: var(--secondaryColor);
+        }
+
+        & .price {
+          color: var(--darkRed);
+        }
+
+        & .specification {
+          position: absolute;
+          top: 0.5rem;
+          width: 1.2rem;
+          text-align: center;
+          font-size: 0.75rem;
+          line-height: 0.8rem;
+          color: #b4a078;
+          border: 0.5px solid #b4a078;
+          border-radius: 1px;
+          padding: 0.2rem 0;
+        }
+      }
+    }
+  }
+}
+
+.footNavbar {
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  border-top: 1px solid var(--dividerColor);
+  background-color: #fafafa;
+
+  & nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: var(--footerHeight);
+
+    & li a {
+      display: block;
+      text-align: center;
+      line-height: 1;
+
+      & .icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        background-image: url(../assets/img/sprites/tabBar.png);
+        background-size: cover;
+
+        &.index {
+          background-position: 0 -8.7rem;
+        }
+
+        &.topic {
+          background-position: 0 -12.2rem;
+        }
+
+        &.category {
+          background-position: 0 -5.2rem;
+        }
+
+        &.cart {
+          background-position: 0 -1.7rem;
+        }
+
+        &.user {
+          background-position: 0 -15.7rem;
+        }
+      }
+
+      & .text {
+        color: #666;
+        font-size: 0.85rem;
+      }
+    }
+
+    & li.active a {
+      & .icon {
+        &.index {
+          background-position: 0 calc(-8.7rem + 1.7rem);
+        }
+
+        &.topic {
+          background-position: 0 calc(-12.2rem + 1.7rem);
+        }
+
+        &.category {
+          background-position: 0 calc(-5.2rem + 1.7rem);
+        }
+
+        &.cart {
+          background-position: 0 calc(-1.7rem + 1.7rem);
+        }
+
+        &.user {
+          background-position: 0 calc(-15.7rem + 1.7rem);
+        }
+      }
+
+      & .text {
+        color: var(--darkRed);
+      }
+    }
+  }
+}

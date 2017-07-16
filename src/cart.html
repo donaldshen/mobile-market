@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <!-- 如果把一个web app添加到了主屏幕中，那么从主屏幕中打开这个web app则全屏显示 -->
+  <meta name="apple-touch-fullscreen" content="yes">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <!-- 强制竖屏 -->
+  <meta name="screen-orientation" content="portrait">
+  <title>购物车</title>
+  <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+  <header class="topBar">
+    <span class="logo">
+      购物车
+    </span>
+    <span class="right">
+      编辑
+    </span>
+  </header>
+  <main>
+    <div class="notice">
+      <span>已满足满88元免邮费</span>
+    </div>
+    <ul class="cartList">
+      <li>
+        <i class="icon"></i>
+        <img src="assets/img/item/jeanInCart.png" alt="jean">
+        <div class="wrapper">
+          <div class="name">男式天丝棉弹直筒牛仔裤<span class="num">x1</span></div>
+          <div class="detail">深蓝色; 29（170/78A）</div>
+          <div class="price">¥229.00</div>
+        </div>
+      </li>
+      <li>
+        <i class="icon checked"></i>
+        <img src="assets/img/item/jeanInCart.png" alt="jean">
+        <div class="wrapper">
+          <div class="name">男式天丝棉弹直筒牛仔裤<span class="num">x1</span></div>
+          <div class="detail">深蓝色; 29（170/78A）</div>
+          <div class="price">¥229.00</div>
+        </div>
+      </li>
+    </ul>
+    <section class="bill">
+      <i class="icon checked"></i>
+      <span class="text">已选(1)</span>
+      <span class="price">¥229.00</span>
+      <button class="order">下单</button>
+    </section>
+  </main>
+  <footer class="footNavbar">
+    <nav>
+      <ul>
+        <li>
+          <a href="main.html">
+            <i class="icon index"></i>
+            <div class="text">
+              首页
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon topic"></i>
+            <div class="text">
+              专题
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon category"></i>
+            <div class="text">
+              分类
+            </div>
+          </a>
+        </li>
+        <li class="active">
+          <a href="./cart.html">
+            <i class="icon cart"></i>
+            <div class="text">
+              购物车
+            </div>
+            <span class="badge">1</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="icon user"></i>
+            <div class="text">
+              个人
+            </div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
