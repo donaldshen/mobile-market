@@ -11,13 +11,14 @@
   <!-- 强制竖屏 -->
   <meta name="screen-orientation" content="portrait">
   <title>首页</title>
-  <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
-  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="lib/swiper/swiper.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css"> -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="headNavbar">
+  <header class="fixed-bar">
     <div class="search">
-      <a class="logo" href="#"><img src="./assets/img/yanxuan.png" alt="严选logo"></a>
+      <a class="logo" href="#"><img src="assets/img/yanxuan.png" alt="严选logo"></a>
       <section class="input">
         <i class="icon"></i>
         <span class="placeholder">搜索商品</span>
@@ -25,16 +26,16 @@
     </div>
     <nav>
       <ul class="list">
-        <li class="tab selected"><a href="#">推荐</a></li>
-        <li class="tab"><a href="#">居家</a></li>
-        <li class="tab"><a href="#">餐厨</a></li>
-        <li class="tab"><a href="#">配件</a></li>
-        <li class="tab"><a href="#">服装</a></li>
-        <li class="tab"><a href="#">洗护</a></li>
-        <li class="tab"><a href="#">婴童</a></li>
-        <li class="tab"><a href="#">杂货</a></li>
-        <li class="tab"><a href="#">饮食</a></li>
-        <li class="tab"><a href="#">志趣</a></li>
+        <li class="tab selected"><a href="#">推荐</a>
+        <li class="tab"><a href="#">居家</a>
+        <li class="tab"><a href="#">餐厨</a>
+        <li class="tab"><a href="#">配件</a>
+        <li class="tab"><a href="#">服装</a>
+        <li class="tab"><a href="#">洗护</a>
+        <li class="tab"><a href="#">婴童</a>
+        <li class="tab"><a href="#">杂货</a>
+        <li class="tab"><a href="#">饮食</a>
+        <li class="tab"><a href="#">志趣</a>
       </ul>
     </nav>
   </header>
@@ -55,15 +56,15 @@
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
       </section>
-      <section class="servicePolicy">
+      <section class="service-policy">
         <ul>
-          <li><i class="icon"></i><span class="text">网易自营品牌</span></li>
-          <li><i class="icon"></i><span class="text">30天无忧退货</span></li>
-          <li><i class="icon"></i><span class="text">48小时快速退款</span></li>
+          <li><i class="icon"></i><span class="text">网易自营品牌</span>
+          <li><i class="icon"></i><span class="text">30天无忧退货</span>
+          <li><i class="icon"></i><span class="text">48小时快速退款</span>
         </ul>
       </section>
     </section>
-    <article class="manufacturersSupplying">
+    <article class="manufacturers-supplying">
       <header>
         <a href="#"><span class="text">品牌制造商直供</span><i class="icon"></i></a>
       </header>
@@ -78,9 +79,9 @@
               </div>
               <i class="icon"></i>
             </div>
-            <img src="./assets/img/xinxiuli.jpg" alt="新秀丽制造">
+            <img src="assets/img/xinxiuli.jpg" alt="新秀丽制造">
           </a>
-        </li>
+
         <li>
           <a href="https://baidu.com">
             <div class="description">
@@ -91,9 +92,9 @@
               </div>
               <i class="icon"></i>
             </div>
-            <img src="./assets/img/xinxiuli.jpg" alt="新秀丽制造">
+            <img src="assets/img/xinxiuli.jpg" alt="新秀丽制造">
           </a>
-        </li>
+
         <li>
           <a href="https://baidu.com">
             <div class="description">
@@ -104,9 +105,9 @@
               </div>
               <i class="icon"></i>
             </div>
-            <img src="./assets/img/xinxiuli.jpg" alt="新秀丽制造">
+            <img src="assets/img/xinxiuli.jpg" alt="新秀丽制造">
           </a>
-        </li>
+
         <li>
           <a href="https://baidu.com">
             <div class="description">
@@ -117,12 +118,12 @@
               </div>
               <i class="icon"></i>
             </div>
-            <img src="./assets/img/xinxiuli.jpg" alt="新秀丽制造">
+            <img src="assets/img/xinxiuli.jpg" alt="新秀丽制造">
           </a>
-        </li>
+
       </ul>
     </article>
-    <article class="newItems">
+    <article class="new-items">
       <header>
         <div class="slogan">
           周一周四 · 新品首发
@@ -134,48 +135,48 @@
       </header>
       <ul>
         <li>
-          <a href="./item.html">
-            <img src="./assets/img/item/jean-300.png" alt="牛仔裤">
-            <div class="tagWraper">
+          <a href="item.html">
+            <img src="assets/img/item/jean-300.png" alt="牛仔裤">
+            <div class="tag-wrapper">
               <div class="aniversary">爆品</div>
-              <div class="gradientPrice">满赠</div>
+              <div class="gradient-price">满赠</div>
             </div>
             <div class="name">男式天丝棉弹直筒牛仔裤</div>
             <div class="description">直筒合体型，经典商务</div>
             <div class="price">¥229</div>
             <div class="specification">2色可选</div>
           </a>
-        </li>
+
         <li>
-          <a href="./item.html">
-            <img src="./assets/img/item/jean-300.png" alt="牛仔裤">
-            <div class="tagWraper">
+          <a href="item.html">
+            <img src="assets/img/item/jean-300.png" alt="牛仔裤">
+            <div class="tag-wrapper">
               <div class="aniversary">爆品</div>
-              <div class="gradientPrice">满赠</div>
+              <div class="gradient-price">满赠</div>
             </div>
             <div class="name">男式天丝棉弹直筒牛仔裤</div>
             <div class="description">直筒合体型，经典商务</div>
             <div class="price">¥229</div>
             <div class="specification">2色可选</div>
           </a>
-        </li>
+
         <li>
-          <a href="./item.html">
-            <img src="./assets/img/item/jean-300.png" alt="牛仔裤">
-            <div class="tagWraper">
+          <a href="item.html">
+            <img src="assets/img/item/jean-300.png" alt="牛仔裤">
+            <div class="tag-wrapper">
               <div class="aniversary">爆品</div>
-              <div class="gradientPrice">满赠</div>
+              <div class="gradient-price">满赠</div>
             </div>
             <div class="name">男式天丝棉弹直筒牛仔裤</div>
             <div class="description">直筒合体型，经典商务</div>
             <div class="price">¥229</div>
             <div class="specification">2色可选</div>
           </a>
-        </li>
+
       </ul>
     </article>
   </main>
-  <footer class="footNavbar">
+  <footer class="fixed-bar">
     <nav>
       <ul>
         <li class="active">
@@ -185,7 +186,7 @@
               首页
             </div>
           </a>
-        </li>
+
         <li>
           <a href="#">
             <i class="icon topic"></i>
@@ -193,7 +194,7 @@
               专题
             </div>
           </a>
-        </li>
+
         <li>
           <a href="#">
             <i class="icon category"></i>
@@ -201,15 +202,15 @@
               分类
             </div>
           </a>
-        </li>
+
         <li>
-          <a href="./cart.html">
+          <a href="cart.html">
             <i class="icon cart"></i>
             <div class="text">
               购物车
             </div>
           </a>
-        </li>
+
         <li>
           <a href="#">
             <i class="icon user"></i>
@@ -217,12 +218,12 @@
               个人
             </div>
           </a>
-        </li>
+
       </ul>
     </nav>
   </footer>
 
-  <script src="./lib/swiper/swiper.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="lib/swiper/swiper.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

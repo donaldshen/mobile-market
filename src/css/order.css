@@ -1,4 +1,4 @@
-@import "common.css";
+@import 'common.css';
 
 :root {
   --topBarHeight: 3.1rem;
@@ -6,19 +6,16 @@
   --arrowWidth: 3.5rem;
 }
 
-.topBar {
-  width: 100%;
+header.fixed-bar {
   height: var(--topBarHeight);
   display: grid;
   grid-template-columns: 3.5rem 2.8rem 1fr 2.8rem var(--arrowWidth);
   grid-template-rows: 1fr;
   grid-template-areas:
-  "home . logo search cart";
+  'home . logo search cart';
   justify-items: center;
   align-items: center;
   background: #fafafa;
-  position: fixed;
-  z-index: 10;
   border-bottom: 1px solid var(--dividerColor);
 
   & a {
@@ -91,9 +88,9 @@ main {
   padding-top: var(--topBarHeight);
   padding-bottom: var(--btnGroupHeight);
 
-  & .arrowRight::after {
+  & .arrow-right::after {
     grid-area: arrow;
-    content: "";
+    content: '';
     width: 0.6rem;
     height: 0.6rem;
     border-top: 1px solid #666;
@@ -123,8 +120,8 @@ main {
     display: grid;
     grid-template-columns: 4rem 1fr var(--arrowWidth);
     grid-template-areas:
-    "name phone arrow"
-    "default address arrow";
+    'name phone arrow'
+    'default address arrow';
     grid-gap: 0.1rem 0;
     justify-items: start;
     background-color: white;
@@ -160,7 +157,7 @@ main {
     & .coupon {
       grid-template-columns: 1fr 2rem var(--arrowWidth);
       grid-template-areas:
-      "text1 text2 arrow";
+      'text1 text2 arrow';
 
       & .text1 {
         grid-area: text1;
@@ -171,10 +168,10 @@ main {
       }
     }
 
-    & .giftCard {
+    & .gift-card {
       grid-template-columns: 2rem 1fr var(--arrowWidth);
       grid-template-areas:
-      "checkbox text arrow";
+      'checkbox text arrow';
 
       & .checkbox {
         width: 1.3rem;
@@ -210,7 +207,7 @@ main {
           position: relative;
 
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             z-index: 5;
             top: 50%;
@@ -229,7 +226,7 @@ main {
     & .invoice {
       grid-template-columns: 2rem 1fr var(--arrowWidth);
       grid-template-areas:
-      "checkbox text arrow";
+      'checkbox text arrow';
 
       & .checkbox {
         width: 1.3rem;
@@ -253,9 +250,9 @@ main {
       grid-template-rows: auto auto 2rem;
       grid-gap: 0 0.5rem;
       grid-template-areas:
-      "img name num"
-      "img detail detail"
-      "img price price";
+      'img name num'
+      'img detail detail'
+      'img price price';
 
       & img {
         grid-area: img;
@@ -304,15 +301,11 @@ main {
   }
 }
 
-footer.pay {
-  position: fixed;
+footer.fixed-bar {
   bottom: 0;
-  left: 0;
-  right: 0;
   height: 3.5rem;
   display: flex;
   align-items: stretch;
-  z-index: 10;
 
   & .price {
     padding-left: 1.21rem;

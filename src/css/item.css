@@ -1,20 +1,17 @@
-@import "common.css";
+@import 'common.css';
 
 :root {
   --topBarHeight: 3.1rem;
   --btnGroupHeight: 3.7rem;
 }
 
-.topBar {
-  width: 100%;
+header.fixed-bar {
   height: var(--topBarHeight);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0.9rem;
   background: #fafafa;
-  position: fixed;
-  z-index: 10;
   border-bottom: 1px solid var(--dividerColor);
 
   & .icon {
@@ -107,8 +104,8 @@ main {
       grid-template-columns: 2.56rem auto;
       grid-gap: 0.3rem;
       grid-template-areas:
-      "img text1"
-      "img text2";
+      'img text1'
+      'img text2';
       align-items: center;
 
       & img {
@@ -127,7 +124,7 @@ main {
     }
   }
 
-  & .baseInfo {
+  & .base-info {
     display: flex;
     justify-content: space-between;
     padding: 1.4rem 0;
@@ -165,7 +162,7 @@ main {
             padding: 0 0.2rem;
 
             &::after {
-              content: "";
+              content: '';
               display: inline-block;
               width: 0.4rem;
               height: 0.4rem;
@@ -210,17 +207,14 @@ main {
     }
   }
 
-  & .moreComments,
-  & .itemDetail {
+  & .more-comments,
+  & .item-detail {
     height: 10rem;
   }
 }
 
-.btnGroup {
-  position: fixed;
+footer.fixed-bar {
   bottom: 0;
-  z-index: 10;
-  width: 100%;
   display: flex;
   align-items: center;
 
@@ -233,7 +227,7 @@ main {
     font-size: 1rem;
   }
 
-  & .customerService {
+  & .customer-service {
     width: 5.6rem;
     flex-grow: 0;
 
@@ -245,13 +239,13 @@ main {
     }
   }
 
-  & .buyNow {
+  & .buy {
     border-left: 0;
     border-right: 0;
     flex: 1 0 0;
   }
 
-  & .addToCart {
+  & .add-to-cart {
     flex: 1 0 0;
     background: var(--darkRed);
     color: white;

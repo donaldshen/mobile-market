@@ -1,4 +1,4 @@
-@import "common.css";
+@import 'common.css';
 
 :root {
   --searchbarHeight: 3.1rem;
@@ -7,12 +7,9 @@
   --footerHeight: 3.55rem;
 }
 
-.headNavbar {
+header.fixed-bar {
   background-color: white;
-  position: fixed;
-  width: 100%;
   top: 0;
-  z-index: 10;
   border-bottom: 1px solid var(--dividerColor);
 
   & .search {
@@ -74,7 +71,7 @@
           color: var(--darkRed);
 
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             left: 0;
             bottom: 0;
@@ -107,7 +104,7 @@ main {
     }
   }
 
-  & .servicePolicy ul {
+  & .service-policy ul {
     background-color: white;
     display: flex;
     justify-content: space-around;
@@ -132,7 +129,7 @@ main {
     }
   }
 
-  & .manufacturersSupplying {
+  & .manufacturers-supplying {
     background-color: white;
 
     & header {
@@ -200,7 +197,7 @@ main {
     }
   }
 
-  & .newItems {
+  & .new-items {
     & header {
       height: 10rem;
       background: url(../assets/img/newBackground.png);
@@ -261,7 +258,7 @@ main {
           background: var(--backgroundColor);
         }
 
-        & .tagWraper div {
+        & .tag-wrapper div {
           display: inline-block;
           margin-right: 0.5rem;
           padding: 0.1rem 0.5rem;
@@ -273,7 +270,7 @@ main {
             background: #e5686d;
           }
 
-          &.gradientPrice {
+          &.gradient-price {
             background: #f48f18;
           }
         }
@@ -315,11 +312,8 @@ main {
   }
 }
 
-.footNavbar {
-  position: fixed;
+footer.fixed-bar {
   bottom: 0;
-  z-index: 10;
-  width: 100%;
   border-top: 1px solid var(--dividerColor);
   background-color: #fafafa;
 

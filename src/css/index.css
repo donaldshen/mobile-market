@@ -1,4 +1,4 @@
-@import "common.css";
+@import 'common.css';
 
 :root {
   --colWidth: 15rem;
@@ -52,7 +52,7 @@ address {
   position: relative;
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     width: calc(2 * var(--colWidth) + var(--gapWidth));
     height: 1px;

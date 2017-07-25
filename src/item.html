@@ -11,20 +11,20 @@
   <!-- 强制竖屏 -->
   <meta name="screen-orientation" content="portrait">
   <title>商品详情</title>
-  <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
-  <link rel="stylesheet" href="./css/item.css">
+  <link rel="stylesheet" href="lib/swiper/swiper.min.css">
+  <link rel="stylesheet" href="css/item.css">
 </head>
 <body>
-  <header class="topBar">
-    <a class="home" href="./main.html"><i class="icon"></i></a>
-    <a class="logo" href="./main.html"><i class="icon"></i></a>
+  <header class="fixed-bar">
+    <a class="home" href="main.html"><i class="icon"></i></a>
+    <a class="logo" href="main.html"><i class="icon"></i></a>
     <div class="right">
       <a class="search" href="#"><i class="icon"></i></a>
-      <a class="cart" href="./cart.html"><i class="icon"></i></a>
+      <a class="cart" href="cart.html"><i class="icon"></i></a>
     </div>
   </header>
   <main>
-    <div>
+    <div class="wrapper">
       <section class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -68,7 +68,7 @@
           </div>
         </div>
       </section>
-      <section class="baseInfo">
+      <section class="base-info">
         <div class="info">
           <div class="name">
             男式天丝棉弹直筒牛仔裤
@@ -82,13 +82,13 @@
           <ul class="tags">
             <li>
               <a href="#">CK Jeans制造商</a>
-            </li>
+
             <li>
               <a href="#">CK Jeans制造商</a>
-            </li>
+
             <li>
               <a href="#">CK Jeans制造商</a>
-            </li>
+
           </ul>
         </div>
         <div class="comment">
@@ -104,20 +104,20 @@
         </div>
       </section>
     </div>
-    <section class="moreComments">
+    <section class="more-comments">
       <!-- TODO: 比较简单 -->
     </section>
-    <section class="itemDetail">
+    <section class="item-detail">
       <!-- TODO: 不写了 -->
     </section>
   </main>
-  <footer class="btnGroup">
-    <button class="customerService"><i class="icon"></i></button>
-    <button class="buyNow">立即购买</button>
-    <button class="addToCart">加入购物车</button>
+  <footer class="fixed-bar">
+    <button class="customer-service"><i class="icon"></i></button>
+    <button class="buy">立即购买</button>
+    <button class="add-to-cart">加入购物车</button>
   </footer>
 
-  <script src="./lib/swiper/swiper.min.js"></script>
-  <script src="./js/item.js"></script>
+  <script src="lib/swiper/swiper.min.js"></script>
+  <script src="js/item.js"></script>
 </body>
 </html>

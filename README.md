@@ -48,3 +48,7 @@ flex-basis是item块shrink和grow的分界线，默认auto就是width的数值�
 
 ### 读取本地json文件
 用Ajax，原生XMLHttpRequest就可以。
+
+
+### omit optional tag
+参考w3规范，可省略html,head,body,li,p标签。但影响editor的auto-indent和block解析，所以不弄这个玩了。

@@ -1,20 +1,17 @@
-@import "common.css";
+@import 'common.css';
 
 :root {
   --topBarHeight: 3.1rem;
   --footerHeight: 3.55rem;
 }
 
-.topBar {
+header.fixed-bar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   padding: 0 1rem;
   background: white;
-  position: fixed;
-  width: 100%;
   height: var(--topBarHeight);
-  z-index: 10;
 
   & .logo {
     grid-column: 2;
@@ -40,16 +37,17 @@ main {
     display: flex;
     align-items: center;
     padding-left: 1rem;
+    margin: 0;
     font-size: 0.85rem;
   }
 
-  & .cartList {
+  & .cart-list {
     & li {
       display: grid;
       grid-template-columns: 3.2rem 5rem auto;
       grid-template-rows: 1fr;
       grid-template-areas:
-      "icon img wraper";
+      'icon img wrapper';
       align-items: center;
       background: white;
       height: 6.5rem;
@@ -60,7 +58,7 @@ main {
         bottom: 0;
         left: 3.2rem;
         right: 0;
-        content: "";
+        content: '';
         height: 1px;
         background: var(--dividerColor);
       }
@@ -86,7 +84,7 @@ main {
       }
 
       & .wrapper {
-        grid-area: wraper;
+        grid-area: wrapper;
         display: flex;
         flex-direction: column;
         padding: 0 1rem 0 0.8rem;
@@ -120,12 +118,12 @@ main {
     grid-template-columns: 3rem auto 6rem 8rem;
     grid-template-rows: 1fr;
     grid-template-areas:
-    "icon text price order";
+    'icon text price order';
     justify-items: center;
     align-items: center;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
@@ -168,11 +166,8 @@ main {
   }
 }
 
-.footNavbar {
-  position: fixed;
+footer.fixed-bar {
   bottom: 0;
-  z-index: 10;
-  width: 100%;
   border-top: 1px solid var(--dividerColor);
   background-color: #fafafa;
 

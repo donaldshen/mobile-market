@@ -1,4 +1,4 @@
-@import "responsive.css";
+@import 'responsive.css';
 
 :root {
   --backgroundColor: #f4f4f4;
@@ -42,7 +42,13 @@ i.icon {
 main > * {
   background-color: white;
 
-  &:not(:last-of-type) {
+  &:not(:last-child) {
     margin-bottom: 0.65rem;
   }
+}
+
+.fixed-bar {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
 }
