@@ -6,96 +6,124 @@
 }
 
 body {
+  /* Box-model */
   min-width: var(--colWidth);
 }
 
 header {
+  /* Box-model */
   width: calc(2 * var(--colWidth) + var(--gapWidth));
   margin: auto;
 
   & h1 {
+    /* Typography */
     text-align: center;
+
+    /* Visual */
     border-bottom: 1px solid var(--dividerColor);
   }
 }
 
 .list {
+  /* Box-model */
   display: grid;
   grid-template-columns: repeat(2, var(--colWidth));
   grid-gap: var(--gapWidth) var(--gapWidth);
   justify-content: center;
 
   & .page {
-    background: white;
-    border: 1px solid var(--secondaryColor);
-    border-radius: 4px;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
-    padding: 1rem;
+    /* Box-model */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem;
     height: 700px;
-    position: relative;
+
+    /* Visual */
+    background: white;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.12), 0 0 6px 0 rgba(0,0,0,.04);
 
     & a {
-      text-align: center;
+      /* Box-model */
       padding-bottom: 5px;
+
+      /* Typography */
+      text-align: center;
       font-size: 24px;
 
       &:hover {
+        /* Visual */
         border-bottom: 1px solid var(--dividerColor);
       }
     }
 
     & iframe {
-      border: 1px solid var(--secondaryColor);
+      /* Box-model */
       width: var(--iPhone5);
       height: 576px;
+
+      /* Visual */
+      border: 1px solid var(--secondaryColor);
     }
   }
 }
 
 address {
+  /* Box-model */
+  margin: 1rem 0 0.5rem;
+
+  /* Typography */
   text-align: center;
   font-style: normal;
-  margin: 1rem 0 0.5rem;
-  position: relative;
 
   &::before {
     content: '';
+
+    /* Box-model */
     display: block;
     width: calc(2 * var(--colWidth) + var(--gapWidth));
     height: 1px;
-    background: var(--dividerColor);
     margin: 0 auto 0.5rem;
+
+    /* Visual */
+    background: var(--dividerColor);
   }
 
   & a {
+    /* Box-model */
     display: flex;
     align-items: center;
     justify-content: center;
 
     & .icon.github {
+      /* Box-model */
       width: 1rem;
       height: 1rem;
+      margin-right: 0.2rem;
+
+      /* Visual */
       background: url(/assets/img/github.png);
       background-size: cover;
-      margin-right: 0.2rem;
     }
   }
 }
 
 @media screen and (max-width: 800px) {
   header {
+    /* Box-model */
     width: 70%;
   }
 
   .list {
+    /* Box-model */
     grid-template-columns: var(--colWidth);
   }
 
   address::before {
+    /* Box-model */
     width: 70%;
   }
 }
